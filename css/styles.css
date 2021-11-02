@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 abbr[title],
@@ -402,8 +402,9 @@ h6, .h6 {
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1.55rem;
   font-weight: 300;
+  margin:5px 5px;
 }
 
 .display-1 {
@@ -486,8 +487,22 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  /* max-width: 100%;
+  height: auto; */
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+
+.img-text-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  font-size: 1.3rem;
+  opacity: 100%;
+  text-shadow: 2px 1px rgb(1, 24, 24);
 }
 
 .img-thumbnail {
@@ -7639,6 +7654,7 @@ button.bg-dark:focus {
 .mb-5,
 .my-5 {
   margin-bottom: 1rem !important;
+  
 }
 
 .ml-5,
@@ -10149,7 +10165,7 @@ h3 {
   line-height: 2.75rem;
 }
 .masthead .masthead-subheading {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 .masthead .masthead-avatar {
   width: 15rem;
@@ -10158,7 +10174,7 @@ h3 {
 @media (min-width: 992px) {
   .masthead {
     padding-top: calc(6rem + 104px);
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
   }
   .masthead .masthead-heading {
     font-size: 4rem;
@@ -10172,7 +10188,9 @@ h3 {
   cursor: pointer;
   position: relative;
   display: block;
-  max-width: 25rem;
+  /* max-width: 25rem; */
+  width:20rem;
+  height:20rem;
   border-radius: 0.5rem;
   overflow: hidden;
 }
