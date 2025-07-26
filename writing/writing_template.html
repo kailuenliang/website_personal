@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Title – Kai-Luen Liang</title>
+    <link rel="icon" type="image/png" href="../media/images/tab_icon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .blog-container {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 0 1em;
+            box-sizing: border-box;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            text-decoration: none;
+            color: inherit;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .blog-header {
+            margin-bottom: 2em;
+        }
+        .blog-title {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        .blog-meta {
+            color: #666;
+            margin-bottom: 1em;
+        }
+        .blog-content {
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+        .blog-content p {
+            margin-bottom: 1.5em;
+        }
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            margin: 2em 0;
+            display: block;
+        }
+        .blog-content h2 {
+            margin: 1.5em 0 1em;
+        }
+        .blog-content blockquote {
+            border-left: 4px solid #333;
+            padding-left: 1em;
+            margin: 1.5em 0;
+            font-style: italic;
+        }
+        .blog-content code {
+            background: #f4f4f4;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .blog-content pre {
+            background: #f4f4f4;
+            padding: 1em;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1.5em 0;
+        }
+        .blog-content pre code {
+            background: none;
+            padding: 0;
+        }
+        @media (max-width: 768px) {
+            .blog-container {
+                padding: 0 1em;
+                margin: 1em auto;
+            }
+            .blog-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="blog-container">
+        <a href="../index.html#writing" class="back-link">&larr; Back to Writing</a>
+        
+        <article>
+            <header class="blog-header">
+                <h1 class="blog-title">Blog Title</h1>
+                <div class="blog-meta">
+                    <time datetime="YYYY-MM-DD">Month DD, YYYY</time>
+                    <span class="blog-category">Category</span>
+                </div>
+            </header>
+
+            <div class="blog-content">
+                <!-- Your blog content goes here -->
+                <p>Start writing your blog post here...</p>
+
+                <h2>Section Title</h2>
+                <p>Add your content here...</p>
+
+                <!-- Example of an image -->
+                <img src="../media/images/your-image.jpg" alt="Description of the image">
+
+                <!-- Example of a blockquote -->
+                <blockquote>
+                    This is a blockquote. Use it for quotes or important notes.
+                </blockquote>
+
+                <!-- Example of code -->
+                <pre><code>// Your code here
+function example() {
+    console.log("Hello, world!");
+}</code></pre>
+            </div>
+        </article>
+    </main>
+</body>
+</html> 

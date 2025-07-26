@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghostwork Is Self Actualization – Kai-Luen Liang</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .project-container {
+            max-width: 700px;
+            margin: 2em auto;
+            padding: 1em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            text-decoration: none;
+            color: inherit;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .project-image {
+            width: 100%;
+            height: auto;
+            margin: 2em 0;
+            background: #eee;
+            display: block;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 75%;
+            height: 0;
+            overflow: hidden;
+            margin: 2em 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .stills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1em;
+            margin: 2em 0;
+        }
+        .stills-grid img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+        .stills-grid img:hover {
+            opacity: 0.8;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #bbb;
+        }
+        @media (max-width: 768px) {
+            .project-container {
+                padding: 1em;
+                margin: 1em;
+            }
+            .stills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="project-container">
+        <a href="../index.html#work" class="back-link">&larr; Back to Work</a>
+        <h1>Ghostwork Is Self Actualization</h1>
+        <div><strong>Year:</strong> 2025</div>
+        
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/1104737550?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Ghostwork_trailer"></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        
+        <div style="margin: 2em 0;">
+            Ghostwork is Self Actualization is a solo multimedia performance piece that explores how automatic captioning and dictation systems reshapes human language. Moving through four distinct phases, the piece traces a path from data acquisition, to digitization of speech, the cloning of speech, and to its complete disintegration into sound fragments. Using four-channel audio, computer monitors, and video projections, the artist explores how systems reduce language into data, separating it from contextual meaning, the spoken voice, and identity. Furthermore, these broken fragments of words and computerized speech are then able to be rearranged and subsequently dictated and randomized as an infinite feedback system.
+        </div>
+        
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/1104739026?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Ghostwork_trailer2_performance"></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+
+        <h2>Project Stills</h2>
+        <div class="stills-grid">
+            <img src="../media/images/ghostwork/gw02.png" alt="Ghostwork still 1" onclick="openModal(this)">
+            <img src="../media/images/ghostwork/gw03.png" alt="Ghostwork still 2" onclick="openModal(this)">
+            <img src="../media/images/ghostwork/gw04.JPG" alt="Ghostwork still 3" onclick="openModal(this)">
+            <img src="../media/images/ghostwork/gw05.png" alt="Ghostwork still 4" onclick="openModal(this)">
+            <img src="../media/images/ghostwork/gw06.JPG" alt="Ghostwork still 5" onclick="openModal(this)">
+        </div>
+    </main>
+
+    <!-- Modal for image enlargement -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(img) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+
+        // Close modal when clicking the X
+        document.querySelector('.close').onclick = function() {
+            closeModal();
+        }
+
+        // Close modal when pressing ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html> 

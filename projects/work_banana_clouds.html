@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Clouds – Kai-Luen Liang</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .project-container {
+            max-width: 700px;
+            margin: 2em auto;
+            padding: 1em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            text-decoration: none;
+            color: inherit;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .project-image {
+            width: 100%;
+            height: auto;
+            margin: 2em 0;
+            background: #eee;
+            display: block;
+        }
+        .writing-section {
+            background: #faf9f6;
+            border-radius: 8px;
+            padding: 2em 1.5em;
+            margin: 2em 0;
+            font-size: 1.08em;
+            line-height: 1.7;
+            color: #222;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        .writing-section h2 {
+            font-size: 1.3em;
+            margin-top: 0;
+        }
+        .writing-section em, .writing-section cite {
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            .project-container {
+                padding: 1em;
+                margin: 1em;
+            }
+            .writing-section {
+                padding: 1em;
+            }
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 2em auto;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        @media (max-width: 900px) {
+            .video-container {
+                max-width: 100vw;
+                padding-bottom: 56.25vw;
+            }
+        }
+        .stills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1em;
+            margin: 2em 0;
+        }
+        .stills-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            background: #222;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            background: rgba(0,0,0,0.85);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+        }
+        .close {
+            position: absolute;
+            top: 2vh;
+            right: 3vw;
+            color: #fff;
+            font-size: 2.5em;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body>
+    <main class="project-container">
+        <a href="../index.html#work" class="back-link">&larr; Back to Work</a>
+        <h1>Banana Clouds</h1>
+        <div><strong>Year:</strong> 2024</div>
+        <div><strong>Description:</strong> Banana Clouds presents conflicting family accounts of why his grandfather emigrated to Taiwan—was it for bananas or watermelon? Using a mix of filmed and AI-generated footage, the story is told and retold by both human and machine voices, creating a surreal narrative that asks: what happens to our personal memories when their gaps are filled with collective hallucinations and standardized data?</div>
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/1089574376" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Banana Clouds Video"></iframe>
+        </div>
+        <div class="stills-grid">
+            <img src="../media/images/banana_clouds/banana.jpg" alt="Banana Clouds still: banana" class="enlargeable">
+            <img src="../media/images/banana_clouds/memory.jpg" alt="Banana Clouds still: memory" class="enlargeable">
+            <img src="../media/images/banana_clouds/opera.jpg" alt="Banana Clouds still: opera" class="enlargeable">
+            <img src="../media/images/banana_clouds/opera2.jpg" alt="Banana Clouds still: opera2" class="enlargeable">
+            <img src="../media/images/banana_clouds/opera_banana.jpg" alt="Banana Clouds still: opera_banana" class="enlargeable">
+            <img src="../media/images/banana_clouds/watermelon.jpg" alt="Banana Clouds still: watermelon" class="enlargeable">
+        </div>
+        <div id="modal" class="modal" style="display:none;">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img" alt="enlarged still">
+        </div>
+        <!-- <img src="../media/images/placeholder.png" alt="Banana Clouds placeholder image" class="project-image"> -->
+        <section class="writing-section">
+            <h2>Banana Clouds - Kai-Luen Liang</h2>
+            <p>I'm not sure what "reliable" data is. When there are gaps in memory, I begin to make up stories, find ways to entertain those gaps. I find ways to live in those gaps. Those gaps are what I hold onto.<br><br>
+            In early 2024, I began seeing AI-generated videos of various people's family photos animated. An old photo of a woman and her grandfather suddenly moving like an old home movie, animated from just a single photo. Jumping out of their frames and reaching into the probabilistic memory frame of collective datasets, a digital hug of something that never happened. Family memories generated from the scraped data of other people's memories. Memories generated from trained YouTube slop or commercial stock video. Previously, I came across another Reddit post of someone asking how they could clone the voice of his father, who was diagnosed with ALS and had a life expectancy of 1-2 years. He was slowly losing his voice and memory. At that time, voice cloning was cumbersome, required a lot of data, and couldn't reproduce the articulation of words that was coherent. At most, it could match the frequency spectrum of the voice. In 2023, I came across multiple posts of similar situations—family members who had passed or were losing their voice or memory. There was a desire to find comfort or certainty in hearing the voice of a loved one. In the Artificial Intelligence Reddit Forum, one user wrote, "I think it's been good for my sisters and brothers and I, at least, to hear our dad's voice again, even if it is just a simulation. It helps us to not forget what he sounded like. My future grandchildren will never know their great-grandfather, but now, if I wanted to, I could use his voice to read them a story. This, in some small way, carries on his legacy and preserves his memory, which I think he would appreciate." (<a href="https://www.reddit.com/r/ArtificialInteligence/comments/17a42xp/i_cloned_my_deceased_fathers_voice_using_ai_and/" target="_blank" rel="noopener">"I cloned my deceased father's voice using AI: : r/ArtificialInteligence" 2023</a>)<br><br>
+            Genealogies have often been passed down through oral storytelling. Memories are living entities tied to collective experiences, hallucinations, and retellings. The stories passed down from generation to generation distort and twist; facts get misremembered, details omitted, and various individual emotions and agendas added. Words get lost in translation across generations. The spaces in between the words, the clouds of the pauses, are where hallucinations have the space to form. New imaginings that seed and grow.<br><br>
+            I was always sure that my grandfather had left Qingdao, China in search of bananas. My mother confirmed this. My grandfather and grandmother both confirmed this. So why was I so confused when certain cousins and family members were saying that they thought it was watermelon? Qingdao, the Chinese seaside port city where my grandfather grew up, wasn't devoid of fruit in any way. However, subtropical fruits such as bananas and pineapples were seen as expensive and hard to find. So, my grandfather, upon seeing the "blackened banana," had planted a seed that would become the story of his migration and eventual exile in Taiwan during the Chinese Civil War. Taiwan, geographically located in Southeast Asia, with a subtropical climate, has a variety of subtropical fruits: pineapples, bananas, lychee, mangos, passion fruit, sugar apples, etc.<br><br>
+            Since my grandfather didn't speak much to me as a kid, I heard about his life through fragments of family storytelling. He was poor, took on an apprenticeship with a chef—free labor in exchange for learning a craft. In China, the master-apprentice roles were a way for people who came from villages to learn new skills despite having no influence or money. He learned Northern Chinese cooking, focusing on staple foods like pan-fried dumplings and baozi. The schedule at the restaurant where he worked was grueling, only resting 3 days a year for the Spring Festival Lunar New Year holiday. He loved listening to different Chinese operas in his free time, particularly Beijing Opera. Was this true? I have no idea. This seed grew in my mind in the gaps of information. He would come home after a grueling day at the restaurant, listening to opera on the national radio broadcast, which would usually be played at night when no one was listening. In preparation for this daily ritual, he would put on his makeup and costumes. In full opera glory, he would perform the roles of the opera. Which roles did he perform? These fictions became my daydreams, ways of connecting to someone I didn't really know except for the once-a-year visits as a child.<br><br>
+            My grandparents had 9 children, including my mother. No one can seem to remember how to make his famous 锅贴 (traditional long pan-fried dumplings).</p>
+            
+            <p>Generative AI models, when faced with a lack of data, can start to "hallucinate." They reach for probabilities and common predictions. Human memory forms on what we remember to be "true," events that were experienced or passed down. Multimodal AI models used for speech, translation, and voice cloning or image diffusion models do not remember. If anything, information can be stored and recalled devoid of meaning, existing as word tokens or numerical values. It consists of multiple infrastructures encompassing GPUs, data collection centers, human labor for data annotation and maintenance, model training, water, and power. These infrastructures do not recall their past experiences. It is an "infrastructure focused on the collection and generation of data." This infrastructure may be used to facilitate the practice of memory, but it does not default to this. It has to be steered toward those ends, because the default is to reduce, distort, and excise the particulars in favor of the general. (Salvaggio) Human memory has no default state. It doesn't move toward the general but is highly malleable to individual gaps. The holes exist on their own without generalized predictions. The gap between the banana and the watermelon, the lost recipe, and his lost Beijing Opera performances are where my memories of my grandfather are.</p>
+            <p><strong>Special thanks to:</strong><br>
+            Lei Lei whom has inspired many of the ideas in this film, and his CalArts class Memory Clash<br>
+            ZZ for the random conversations<br>
+            Xiao Lao Hu<br>
+            Mom<br>
+            Music For Your Inbox who commissioned this film and gave great emotional support :)</p>
+            <p><strong>References</strong><br>
+            Salvaggio, Eryk. "Infrastructures of Memory." cybernetic forests, 2024, <a href="https://cyberneticforests.substack.com/p/infrastructures-of-memory" target="_blank" rel="noopener">https://cyberneticforests.substack.com/p/infrastructures-of-memory</a>. Accessed 20 November 2024.<br>
+            <a href="https://www.reddit.com/r/ArtificialInteligence/comments/17a42xp/i_cloned_my_deceased_fathers_voice_using_ai_and/" target="_blank" rel="noopener">"I cloned my deceased father's voice r/ArtificialInteligence." 2023. Reddit.</a>
+            </p>
+        </section>
+        <div style="text-align:center; margin: 2em 0 0 0; font-size:1.1em;">
+            Full film available at <a href="https://www.musicforyourinbox.com/january-2025" target="_blank" rel="noopener">Music For Your Inbox</a>
+        </div>
+    </main>
+    <script>
+    // Modal enlarge functionality for stills
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeBtn = document.querySelector('.modal .close');
+    document.querySelectorAll('.enlargeable').forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = 'flex';
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+        });
+    });
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    };
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+    </script>
+</body>
+</html> 

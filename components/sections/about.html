@@ -1,0 +1,30 @@
+<div class="bio">
+    <img src="media/images/face_photo.png" alt="Kai-Luen Liang" class="portrait">
+    <div class="bio-text">
+        <div id="short-bio" style="margin-bottom:1em;">
+            <strong>Bio:</strong><br>
+            Kai-Luen Liang is an interdisciplinary artist based in Los Angeles. Working with code, generative sound, and digital media, his work explores themes of memory, erasure, migration, and machine perception. He creates hybrid instruments and glitch-based software systems that embrace failure and miscommunication as a mode of resistance and poetic possibility.<br><br>
+            He has exhibited internationally at ARS Electronica, SXSW, Boiler Room Beijing, Clockenflap, Redcat, and more, with music released on labels including SVBKVLT, Ran Music, and Robox Neotech. He is faculty at CalArts' Center for Integrated Media and a visiting artist at Occidental College, where he teaches courses on creative coding, AI, and sound installation.<br><br>
+            <a href="#" onclick="document.getElementById('short-bio').style.display='none';document.getElementById('long-bio').style.display='block';return false;" style="margin-top:1em; display:inline-block;">Show Full Bio</a>
+        </div>
+        <div id="long-bio" style="display:none;">
+            <p>Kai-Luen Liang is an interdisciplinary artist working with code, sound, video, and digital poetics. His work explores entangled themes of memory, erasure, migration, and machine perception, often using generative processes, DIY software, and malfunctioning systems to produce time-based, unstable experiences. Informed by diasporic histories and glitch aesthetics, he interrogates systems of surveillance, algorithmic divination, and the fragmentation of identity in digital space.</p>
+            <p>He builds hybrid instruments and designs custom software that intentionally embraces breakdown and miscommunication. His projects seek alternatives to dominant narratives of utility and optimization, revealing the poetic and affective potential of failure. At the core of his practice is a belief in the power of uselessness—software and algorithms not built for productivity, but for reflection, resistance, and alternative ways of being.</p>
+            <p>His work spans sound design for interactive installations and film, as well as solo and collaborative projects incorporating microsound, ASMR, and hallucinations from neural networks. His recent works often center around the sonic byproducts of machine learning failure, drawing connections between intimacy, fragility, and digital perception.</p>
+            <p>He has performed and exhibited internationally, including at ARS Electronica (Linz), SXSW (Austin), XCOAX Conference for Computation, Communication, Aesthetics & X, Boiler Room (Beijing), Clockenflap Music Festival (Hong Kong), Shanghai International Jazz Festival, Redcat (Los Angeles), JACC, and 751 Design Week (Beijing). His music has been released by SVBKVLT (Shanghai), Ran Music (Beijing), Modern Sky, and Robox Neotech (Berlin).</p>
+            <p>He holds a BA in Asian American Studies from the University of California, Santa Barbara, and an MFA in Music Technology: Intelligence, Interaction, and Design from the California Institute of the Arts.</p>
+            <p>He currently serves as faculty at the Center for Integrated Media at CalArts and as a visiting artist at Occidental College, where he teaches courses in interactive media, machine learning, creative coding, and multichannel sound installation.</p>
+            <div style="margin-top:1em;">
+                <a href="#" onclick="document.getElementById('long-bio').style.display='none';document.getElementById('short-bio').style.display='block';return false;" style="margin-right:1em;">Show Short Bio</a>
+                <a href="cv.html" class="bio-link">Show CV</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+// Show only short bio by default
+window.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('short-bio').style.display = 'block';
+    document.getElementById('long-bio').style.display = 'none';
+});
+</script> 

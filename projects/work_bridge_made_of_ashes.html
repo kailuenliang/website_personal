@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridge Made of Ashes – Kai-Luen Liang</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .project-container {
+            max-width: 700px;
+            margin: 2em auto;
+            padding: 1em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            text-decoration: none;
+            color: inherit;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .project-image {
+            width: 100%;
+            height: auto;
+            margin: 2em 0;
+        }
+        @media (max-width: 768px) {
+            .project-container {
+                padding: 1em;
+                margin: 1em;
+            }
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 2em auto;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        @media (max-width: 900px) {
+            .video-container {
+                max-width: 100vw;
+                padding-bottom: 56.25vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="project-container">
+        <a href="../index.html#work" class="back-link">&larr; Back to Work</a>
+        <h1>Bridge Made of Ashes</h1>
+        <div><strong>Year:</strong> 2021</div>
+        <div><strong>Description:</strong> a reflection on death and loss through digital mediation. How do we mourn through a screen?</div>
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/591898925" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Bridge Made of Ashes Video"></iframe>
+        </div>
+        <img src="../media/images/bridge_gif.gif" alt="Bridge Made of Ashes" class="project-image">
+    </main>
+</body>
+</html> 

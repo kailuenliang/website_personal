@@ -1,296 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kai-Luen Liang</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/img/face_photo.png" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="media/images/tab_icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg bg-primary text-uppercase fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Kai-Luen Liang</a>
-            <button
-                class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
-                type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-                aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Projects</a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
-                    </li>
-                </ul>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-brand">
+                <h1>Kai-Luen Liang</h1>
+                <p class="tagline">Sound and Video Artist, Educator</p>
             </div>
-        </div>
-    </nav>
-
-    <!-- Masthead-->
-    <header class="masthead bg-primary text-white text-center">
-        <div class="container d-flex align-items-center flex-column">
-            <img src="assets/img/feedback_face.gif" alt="Feedback Face" class="masthead-avatar mb-5" />
-            <p class="masthead-subheading font-weight-bold mb-0">Sonic Arts - Sound and Image - Neural Dreaming - Computational Media</p>
-        </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#code">Software and Messy Code</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- About Section-->
-    <section class="page-section bg-primary text-white mb-0" id="about">
+    <main>
+        <!-- Sections will be loaded dynamically -->
+        <section id="home" class="section">
+            <div class="container">
+                <!-- Home content will be loaded dynamically -->
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About</h2>
+                <div class="about-content"></div>
+            </div>
+        </section>
+
+        <section id="work" class="section">
+            <div class="container">
+                <h2>Work</h2>
+                <div class="work-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="art">Art</button>
+                    <button class="filter-btn" data-filter="music">Music</button>
+                </div>
+                <div class="work-grid"></div>
+            </div>
+        </section>
+
+        <section id="teaching" class="section">
+            <div class="container">
+                <h2>Teaching</h2>
+                <div class="teaching-content"></div>
+            </div>
+        </section>
+
+        <section id="writing" class="section">
+            <div class="container">
+                <h2>Writing</h2>
+                <div class="writing-grid"></div>
+            </div>
+        </section>
+
+        <section id="code" class="section">
+            <div class="container">
+                <h2>Software and Messy Code</h2>
+                <div class="code-grid"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <a href="mailto:your.email@example.com" class="contact-link">
+                            <i class="fas fa-envelope"></i> your.email@example.com
+                        </a>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <div class="container">
-            <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
-            <div class="row">
-                <div class="text-left mt-4 ml-auto">
-                    <p class="lead">
-                        I'm Kai-Luen Liang. I am an interdisciplinary artist, creative technologist, and educator working across a variety of digital media, found sound, and electronics.<br><br>
-                        I currently am faculty at the Center For Integrated Media as well as Music Technology at the California Institute of the Arts.<br><br>
-                        <i><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="bio.html">A more detailed bio/cv here</a></i>
-                    </p>
-                </div>
-            </div>
+            <p>&copy; 2021 Kai-Luen Liang. All rights reserved.</p>
         </div>
-    </section>
+    </footer>
 
-    <!-- Portfolio Section-->
-    <section class="page-section portfolio" id="portfolio">
-        <div class="container">
-            <div class="row justify-content-center">
-                <!-- Portfolio Item: Swarm -->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal11">
-                        <div class="img-text-centered">Swarm</div>
-                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/swarm.png" alt="Swarm Image" />
-                    </div>
-                </div>
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" id="backToTop">↑ Top</a>
 
-                <!-- Portfolio Item: VOID -->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal23">
-                        <div class="img-text-centered">虚无v7.0 (VOID)</div>
-                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/VOID.png" alt="VOID Image" />
-                    </div>
-                </div>
-
-                <!-- Portfolio Item: Audio Visual Experiments -->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                        <div class="img-text-centered">Audio Visual Experiments</div>
-                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/sound_image.gif" alt="Audio Visual Image" />
-                    </div>
-                </div>
-
-                <!-- Portfolio Item: Bridge Made of Ashes -->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
-                        <div class="img-text-centered">Bridge Made of Ashes</div>
-                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/bridge_gif.gif" alt="Bridge Made of Ashes Image" />
-                    </div>
-                </div>
-
-                <!-- Portfolio Item: Reverberations -->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal8">
-                        <div class="img-text-centered">Reverberations</div>
-                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/reverberations.png" alt="Reverberations Image" />
-                    </div>
-                </div>
-
-                <!-- Portfolio Item: Blue Marbles -->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                        <div class="img-text-centered">Blue Marbles</div>
-                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/blue_marbles.gif" alt="Blue Marbles Image" />
-                    </div>
-                </div>
-
-                <!-- Portfolio Item: Flag ASMR -->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
-                        <div class="img-text-centered">Flag ASMR</div>
-                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/flag_asmr.png" alt="Flag ASMR Image" />
-                    </div>
-                </div>
-
-                <!-- Portfolio Item: Eat Broadcast Erase -->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
-                        <div class="img-text-centered">Eat Broadcast Erase</div>
-                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/chi-bo_mari.png" alt="Eat Broadcast Erase Image" />
-                    </div>
-                </div>
-
-                <!-- Portfolio Item: Emerald Teeth -->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                        <div class="img-text-centered">Emerald Teeth</div>
-                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/emerald_teeth.gif" alt="Emerald Teeth Image" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Modals -->
-    <!-- Modal for Swarm -->
-    <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-            <div class="modal-content">
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                </button>
-                <div class="modal-body text-center">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Swarm: Movement For Bodies and Strings</h2>
-                                <br>
-                                <p class="mb-5">
-                                    Swarm: Collaborative Instrument and Installation with Josh Ezra Breen Tucci (2019)<br><br>
-                                    Swarm is an audio-visual instrument consisting of a series of 8 stringed instruments that evokes the droning sounds of a metallic swarm. The instruments are tuned at different dissonant intervals and are controlled by a distance sensor and Arduino. The position of the body is tracked in space to correspond to the position of the real-time generative visuals.
-                                </p>
-                                <div style="padding:56.25% 0 0 0;position:relative;">
-                                    <iframe src="https://player.vimeo.com/video/374867633?h=3b74736f1d&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Swarm No_1_Movement for Bodies and Strings"></iframe>
-                                </div>
-                                <br>
-                                <button class="btn btn-primary" data-dismiss="modal">
-                                    <i class="fas fa-times fa-fw"></i> Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for VOID -->
-    <div class="portfolio-modal modal fade" id="portfolioModal23" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-            <div class="modal-content">
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                </button>
-                <div class="modal-body text-center">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">虚无v7.0 (VOID)</h2>
-                                <br>
-                                <p class="mb-5">
-                                    Multichannel Audio Visual Installation/ Composition filmed from Beijing Design Week (2016). Built in a large shipping container. Speaker array and projectors.<br><br>
-                                    In Collaboration with Ding Dong Studios. Audio-Visual Design, Music/Sound Design: Kai-Luen Liang (soulspeak). Project Director: Ding Dong.
-                                </p>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/6IYJ674QECM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                <br>
-                                <button class="btn btn-primary" data-dismiss="modal">
-                                    <i class="fas fa-times fa-fw"></i> Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Other Modals for projects... -->
-    <!-- Follow the same structure as above for other portfolio items -->
-
-    <!-- Contact Section-->
-    <section class="page-section" id="contact">
-        <div class="container">
-            <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0">Email</h3>
-            <br>
-            <h3 class="text-center text-secondary mb-0">kailuensound AT gmail (dot) com</h3>
-            <br>
-            <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-dark" href="https://www.instagram.com/kailuen3030/">Instagram</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer-->
-    <div class="copyright py-4 text-center text-white">
-        <div class="container"><small>© Kai-Luen Liang 2021</small></div>
-    </div>
-
-    <!-- Bootstrap core JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Third party plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <!-- Contact form JS-->
-    <script src="assets/mail/jqBootstrapValidation.js"></script>
-    <script src="assets/mail/contact_me.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Back to top functionality
+        const backToTopButton = document.getElementById('backToTop');
+        
+        // Show button when user scrolls down 300px
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        // Smooth scroll to top when button is clicked
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
-
-</html>
+</html> 
