@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swarm – Kai-Luen Liang</title>
+    <title>Reverberations – Kai-Luen Liang</title>
+    <link rel="icon" type="image/png" href="../media/images/tab_icon.png">
     <link rel="stylesheet" href="../css/style.css">
     <style>
         .project-container {
-            max-width: 700px;
+            max-width: 900px;
             margin: 2em auto;
             padding: 1em;
         }
@@ -20,10 +21,58 @@
         .back-link:hover {
             text-decoration: underline;
         }
+        .video-container {
+            margin: 2em 0;
+            max-width: 100%;
+        }
+        .project-description {
+            margin: 2em 0;
+            line-height: 1.6;
+        }
+        .project-description p {
+            margin-bottom: 1.5em;
+        }
         .project-image {
             width: 100%;
+            max-width: 600px;
             height: auto;
             margin: 2em 0;
+            display: block;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1em;
+            margin: 2em 0;
+        }
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+        }
+        .image-caption {
+            margin-top: 1em;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .dataset-section {
+            margin-top: 3em;
+            padding-top: 2em;
+            border-top: 1px solid #eee;
+        }
+        .dataset-section h3 {
+            margin-bottom: 1em;
+            font-size: 1.2em;
+        }
+        .dataset-section .image-grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5em;
+        }
+        .dataset-section .image-grid img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #eee;
         }
         @media (max-width: 768px) {
             .project-container {
@@ -35,11 +84,61 @@
 </head>
 <body>
     <main class="project-container">
-        <a href="../index.html#work" class="back-link">&larr; Back to Work</a>
-        <h1>Swarm</h1>
-        <div><strong>Year:</strong> [Year]</div>
-        <div><strong>Description:</strong> [Brief description of the project]</div>
-        <img src="../media/images/swarm.png" alt="Swarm" class="project-image">
+        <a href="../index.html#work" class="back-link">&larr; Back to Selected Work</a>
+        <h1>Reverberations</h1>
+        <div><strong>Year:</strong> 2020-21</div>
+        
+        <div class="image-grid">
+            <img src="../media/images/Reverberations/8.jpg" alt="Reverberations Image 8">
+            <img src="../media/images/Reverberations/7.jpg" alt="Reverberations Image 7">
+        </div>
+        <div class="image-caption">
+            <p><em>StyleGAN 2 with Style Transfer trained on custom dataset</em></p>
+        </div>
+        
+        <div class="video-container">
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/519433405?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Reverberations"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+        
+        <div class="project-description">
+            <p><strong>Reverberations (2020-21)</strong></p>
+            
+            <p>This short film looks at maintenance of the sound and image of Mao's China through CCP propaganda posters made from the 1950s to 1980s and the audio reverberations of Mao's now iconic Tiananmen Square speech in 1949 . A dataset of over 2000 propaganda posters were collected and carefully prepared from the Shanghai Propaganda Poster Art Center  as training data into a Generative Adversarial Network (Style GAN 2 ADA). The machine learning model learns the features of the input dataset and attempts to recreate new images from the features it has learned from the data.</p>
+
+            <p><strong>1949:</strong> The ghosts of a public square filled with bodies caught up in the fervor of victory. The sound of a single voice through multiple loudspeakers echoing throughout Tiananmen Square. The voice bouncing off the surrounding concrete, no longer dampened by human bodies. The founding of the People's Republic of China was marked by this grand celebration of victory over the Kuomintang and western imperialist powers. Mao Ze Dong looked down at the square from above and let his voice ring out after each phrase as if to allow the space between the echoes to transfer into the bodies and minds of his audience. As this historic speech was uploaded and poorly transferred into digital space, the sounds of the reverb and echo become compressed and augmented. A metallic ring stretches the space in between words and myth.</p>
+
+            <p>I remember hearing this famous speech through poorly transferred audio recordings as a teenager. I never remembered or could decipher what was actually being said with Mao's heavy Hunanese accent. But the sound of the echo and the pauses in between remained etched in my mind as an audio map of a mythologized moment. The space seemed infinite and Mao's voice perforated through any form of matter. The faces coming from the audience looked as a nebulous forgotten cloud leftover by the last rain. Distant faces in foggy memories all pierced with the knives of a loud voice. In this piece, the actual words from the audio were cut out leaving only the tails of the amplified and stretched reverberation of Tiananmen Square in a single moment in 1949. The space in between words blur old boundaries.</p>
+        </div>
+        
+        <div class="image-grid">
+            <img src="../media/images/Reverberations/1.jpg" alt="Reverberations Image 1">
+            <img src="../media/images/Reverberations/2.jpg" alt="Reverberations Image 2">
+            <img src="../media/images/Reverberations/3.jpg" alt="Reverberations Image 3">
+            <img src="../media/images/Reverberations/4.jpg" alt="Reverberations Image 4">
+            <img src="../media/images/Reverberations/5.jpg" alt="Reverberations Image 5">
+            <img src="../media/images/Reverberations/6.jpg" alt="Reverberations Image 6">
+            <img src="../media/images/Reverberations/9.jpg" alt="Reverberations Image 9">
+            <img src="../media/images/reverberations.png" alt="Reverberations">
+        </div>
+        
+        <div class="image-caption">
+            <p><em>Images 1-6, StyleGAN 3; Image 9, StyleGAN 2 ADA</em></p>
+        </div>
+        
+        <div class="dataset-section">
+            <h3>About the dataset</h3>
+            <p>2000+ images were collected from the Shanghai Propaganda Art Centre, as well as Internet Archive, and old books. Cropped to 512x512 and trained on a Nvidia 2070 GPU.</p>
+            <div class="image-grid">
+                <img src="../media/images/Reverberations/example_dataset/001.png" alt="Dataset Example 1">
+                <img src="../media/images/Reverberations/example_dataset/002.png" alt="Dataset Example 2">
+                <img src="../media/images/Reverberations/example_dataset/003.png" alt="Dataset Example 3">
+                <img src="../media/images/Reverberations/example_dataset/004.png" alt="Dataset Example 4">
+                <img src="../media/images/Reverberations/example_dataset/005.png" alt="Dataset Example 5">
+                <img src="../media/images/Reverberations/example_dataset/006.png" alt="Dataset Example 6">
+                <img src="../media/images/Reverberations/example_dataset/007.png" alt="Dataset Example 7">
+                <img src="../media/images/Reverberations/example_dataset/shpropcentre.png" alt="Shanghai Propaganda Centre">
+            </div>
+        </div>
     </main>
 </body>
-</html> 
+</html>

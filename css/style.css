@@ -36,6 +36,21 @@ body {
     padding: 0;
 }
 
+/* Global link styles */
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f00;
+}
+
 header, nav, main, footer {
     width: 100%;
     margin: 0 auto;
@@ -82,9 +97,14 @@ header {
 }
 
 .nav-links a {
-    color: #00f;
-    text-decoration: underline;
+    color: #000;
+    text-decoration: none;
     font-weight: 400;
+}
+
+.nav-links a:visited {
+    color: #000;
+    text-decoration: none;
 }
 
 .nav-links a:hover {
@@ -159,8 +179,13 @@ img {
 }
 
 .social-links a {
-    color: #00f;
-    text-decoration: underline;
+    color: #000;
+    text-decoration: none;
+}
+
+.social-links a:visited {
+    color: #000;
+    text-decoration: none;
 }
 
 .social-links a:hover {
