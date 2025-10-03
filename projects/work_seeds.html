@@ -33,6 +33,20 @@
             margin: 2em 0;
             line-height: 1.6;
         }
+        .video-container {
+            position: relative;
+            padding-bottom: 75%;
+            height: 0;
+            overflow: hidden;
+            margin: 2em 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
         @media (max-width: 768px) {
             .project-container {
                 padding: 0 1em;
@@ -69,6 +83,11 @@
         <img src="../media/images/seeds/7.jpg" alt="Para-Seedlings 7" class="project-image">
         <img src="../media/images/seeds/8.jpg" alt="Para-Seedlings 8" class="project-image">
         <img src="../media/images/seeds/10.jpg" alt="Para-Seedlings 10" class="project-image">
+        
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/1122553360?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Paraseedlings_documentation_video"></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
     </main>
 </body>
 </html> 

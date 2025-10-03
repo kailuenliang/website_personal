@@ -1,4 +1,4 @@
-/* 90s Minimal CSS with Graphik font */
+/* Minimal CSS inspired by Trevor Paglen's studio */
 @font-face {
     font-family: 'Graphik';
     src: url('fonts/Graphik-Light.otf') format('opentype');
@@ -34,6 +34,8 @@ body {
     color: #000;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
 /* Global link styles */
@@ -51,55 +53,46 @@ a:hover {
     color: #f00;
 }
 
-header, nav, main, footer {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-}
-
+/* Minimal header like Paglen's site */
 header {
+    padding: 2em 0;
     border-bottom: 1px solid #000;
-    padding: 1em 0 0.5em 0;
-    text-align: left;
-    margin: 0 2em;
+    margin-bottom: 2em;
 }
 
 .main-nav {
-    margin-bottom: 1em;
-    margin-left: 2em;
-    margin-right: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2em;
 }
 
 .nav-brand h1 {
-    font-size: 2em;
-    font-weight: 600;
-    margin: 0 0 0.2em 0;
-    display: inline;
-}
-
-.tagline {
-    font-size: 1em;
-    font-weight: 300;
-    margin-left: 1em;
-    display: inline;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: -0.02em;
 }
 
 .nav-links {
     list-style: none;
     padding: 0;
-    margin: 1em 0 0 0;
-    display: block;
+    margin: 1.5em 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
 }
 
 .nav-links li {
-    display: inline;
-    margin-right: 1.5em;
+    margin: 0;
 }
 
 .nav-links a {
     color: #000;
     text-decoration: none;
     font-weight: 400;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .nav-links a:visited {
@@ -108,34 +101,37 @@ header {
 }
 
 .nav-links a:hover {
-    color: #f00;
+    color: #666;
 }
 
+/* Minimal content sections */
 .section {
-    padding: 1.5em 0 1.5em 0;
-    border-bottom: 1px solid #ccc;
+    padding: 3em 0;
     margin: 0;
 }
 
 .section h2 {
-    font-size: 1.5em;
-    font-weight: 600;
-    margin: 0 0 1em 0;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0 0 2em 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .container {
-    width: 90%;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 2em;
 }
 
+/* Minimal footer */
 footer {
     border-top: 1px solid #000;
     text-align: left;
-    font-size: 0.9em;
-    padding: 1em 0;
-    margin-top: 2em;
+    font-size: 0.8em;
+    padding: 2em 0;
+    margin-top: 4em;
+    color: #666;
 }
 
 img {
@@ -219,24 +215,41 @@ img {
     background: #333;
 }
 
+/* Minimal project styling */
 .project {
-    margin-bottom: 2.5em;
+    margin-bottom: 3em;
     padding-bottom: 2em;
     border-bottom: 1px solid #eee;
 }
+
 .project img {
-    width: 640px;
-    height: 400px;
-    object-fit: cover;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     display: block;
-    margin: 1em 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin: 1.5em 0;
 }
+
 .project h3 {
-    margin-bottom: 0.2em;
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 0 0 0.5em 0;
+    line-height: 1.3;
 }
+
+.project h3 a {
+    color: #000;
+    text-decoration: none;
+}
+
+.project h3 a:hover {
+    color: #666;
+}
+
 .project > div {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
+    font-size: 0.9em;
+    color: #666;
 }
 
 /* Teaching Section */
@@ -268,33 +281,35 @@ img {
     line-height: 1.5;
 }
 
+/* Mobile responsiveness */
 @media (max-width: 768px) {
     body {
-        font-size: 1em;
-        padding: 0;
+        font-size: 15px;
     }
-    .container, .teaching-content, .contact-content {
-        padding: 0 1em;
-        width: 100%;
+    
+    .container {
+        padding: 0 1.5em;
     }
+    
+    .main-nav {
+        padding: 0 1.5em;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    .section {
+        padding: 2em 0;
+    }
+    
+    .project {
+        margin-bottom: 2em;
+    }
+    
     .project img {
         width: 100%;
-        max-width: 100vw;
-        height: auto;
-        min-width: 0;
-        min-height: 0;
-    }
-    .nav-links {
-        display: block;
-        margin: 1em 0 0 0;
-        padding: 0;
-        text-align: left;
-    }
-    .nav-links li {
-        display: block;
-        margin: 0 0 0.5em 0;
-    }
-    header {
-        padding: 1em 0 0.5em 0;
+        max-width: 100%;
     }
 } 

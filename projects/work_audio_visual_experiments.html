@@ -25,6 +25,20 @@
             height: auto;
             margin: 2em 0;
         }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin: 2em 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
         @media (max-width: 768px) {
             .project-container {
                 padding: 1em;
@@ -37,9 +51,29 @@
     <main class="project-container">
         <a href="../index.html#work" class="back-link">&larr; Back to Work</a>
         <h1>Audio Visual Experiments</h1>
-        <div><strong>Year:</strong> [Year]</div>
-        <div><strong>Description:</strong> [Brief description of the project]</div>
+        <div><strong>Year:</strong> 2020</div>
+        <h3>Music Video for Emerald Teeth by T Gowdy, Commissioned by Constellation Records.</h3>
+        
+        <div class="video-container">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/469077585?h=89c7c18999" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="project-description">
+            <h3>Press</h3>
+            <p><a href="https://circuitsweet.co.uk/2020/10/t-gowdy-shares-new-a-single-emerald-teeth-part-of-constellations-corona-borealis-series/" target="_blank" rel="noopener">Circuit Sweet - T. GOWDY SHARES NEW A/SINGLE "EMERALD TEETH" PART OF CONSTELLATIONS CORONA BOREALIS SERIES</a></p>
+        </div>
+        <br>
+        <br>
+        
+        <h3>Music Video for Teebs ft Panda Bear: Did It Again. 2022 Brainfeeder Records</h3>
+        
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Fyiwh3Wjp-k?si=KRRuLyhYXvcPPSnS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+  
+
         <img src="../media/images/sound_image.gif" alt="Audio Visual Experiments" class="project-image">
+        
     </main>
 </body>
 </html> 
