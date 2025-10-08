@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics / Interfaces – Kai-Luen Liang</title>
+    <link rel="icon" type="image/png" href="../media/images/tab_icon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .project-container {
+            max-width: 900px;
+            margin: 2em auto;
+            padding: 1em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1em;
+            text-decoration: none;
+            color: inherit;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .video-container {
+            margin: 2em 0;
+        }
+        .project-image {
+            width: 100%;
+            height: auto;
+            margin: 2em 0;
+        }
+        .project-image-small {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            margin: 1em 0;
+            display: block;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+        .project-image-small:hover {
+            opacity: 0.8;
+        }
+        .project-section {
+            margin: 3em 0;
+        }
+        .swarm-content {
+            display: flex;
+            gap: 2em;
+            align-items: flex-start;
+            margin: 1em 0 2em 0;
+        }
+        .swarm-image-wrapper {
+            flex: 0 0 auto;
+        }
+        .swarm-description {
+            flex: 1;
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .project-container {
+                padding: 1em;
+                margin: 1em;
+            }
+            .swarm-content {
+                flex-direction: column;
+            }
+            .swarm-image-wrapper {
+                width: 100%;
+            }
+            .project-image-small {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="project-container">
+        <a href="../index.html#work" class="back-link">&larr; Back to Selected Work</a>
+        <h1>Electronics / Interfaces</h1>
+        
+        <div class="project-section">
+            <h2>Grains: Rice Sampler Interface</h2>
+            <div><strong>Year:</strong> 2018</div>
+            <p>Grains: Rice Sampler Interface (2018) is a hand-built wooden box filled with rice that becomes its own instrument: eight pressure zones, ribbon sensors, and buttons capture touch and motion to sample the rice's acoustic texture via a condenser mic, while a Raspberry Pi running Pure Data records, loops, and manipulates the grains in real time; performance data feeds TouchDesigner for live visual feedback.</p>
+            <div class="video-container">
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1106431548?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="grains"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+        </div>
+
+        <div class="project-section">
+            <h2>Swarm</h2>
+            <div class="swarm-content">
+                <div class="swarm-image-wrapper">
+                    <a href="#swarm-video">
+                        <img src="../media/images/swarm.png" alt="Swarm" class="project-image-small">
+                    </a>
+                </div>
+                <div class="swarm-description">
+                    <p>Eight fan-bowed, three-string drone instruments respond to audience proximity—distance sensors modulate fan speed, pickups amplify the sound, and TouchDesigner turns the data into live three-projector visuals—binding bodies, air, strings, and light into one responsive ecosystem.</p>
+                </div>
+            </div>
+            <div class="video-container" id="swarm-video">
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/374867633?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Swarm No_1_Movement for Bodies and Strings_test"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+
