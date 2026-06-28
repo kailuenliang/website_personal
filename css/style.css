@@ -55,9 +55,9 @@ a:hover {
 
 /* Minimal header like Paglen's site */
 header {
-    padding: 2em 0;
+    padding: 1em 0;
     border-bottom: 1px solid #000;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .main-nav {
@@ -76,10 +76,10 @@ header {
 .nav-links {
     list-style: none;
     padding: 0;
-    margin: 1.5em 0 0 0;
+    margin: 0.75em 0 0 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: 1.5em;
 }
 
 .nav-links li {
@@ -106,14 +106,14 @@ header {
 
 /* Minimal content sections */
 .section {
-    padding: 3em 0;
+    padding: 1.5em 0;
     margin: 0;
 }
 
 .section h2 {
     font-size: 1.2em;
     font-weight: 400;
-    margin: 0 0 2em 0;
+    margin: 0 0 1em 0;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
@@ -129,8 +129,8 @@ footer {
     border-top: 1px solid #000;
     text-align: left;
     font-size: 0.8em;
-    padding: 2em 0;
-    margin-top: 4em;
+    padding: 1em 0;
+    margin-top: 2em;
     color: #666;
 }
 
@@ -217,8 +217,8 @@ img {
 
 /* Minimal project styling */
 .project {
-    margin-bottom: 3em;
-    padding-bottom: 2em;
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
     border-bottom: 1px solid #eee;
 }
 
