@@ -252,6 +252,12 @@ img {
     color: #666;
 }
 
+/* Sound Section */
+.sound-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 /* Teaching Section */
 .teaching-content {
     max-width: 700px;

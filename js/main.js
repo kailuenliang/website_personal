@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     contentDiv = section.querySelector('.teaching-content');
                 } else if (sectionId === 'writing') {
                     contentDiv = section.querySelector('.writing-grid');
+                } else if (sectionId === 'sound') {
+                    contentDiv = section.querySelector('.sound-content');
                 } else if (sectionId === 'code') {
                     contentDiv = section.querySelector('.code-grid');
                 } else if (sectionId === 'contact') {
@@ -42,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Load all sections
-    const sections = ['home', 'about', 'work', 'teaching', 'writing', 'code', 'contact'];
+    const sections = ['home', 'about', 'work', 'sound', 'teaching', 'writing', 'code', 'contact'];
     sections.forEach(sectionId => loadSectionContent(sectionId));
 
     // Mobile menu functionality
