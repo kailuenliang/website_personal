@@ -143,12 +143,43 @@ img {
 }
 
 /* Remove all modern extras */
-.mobile-menu-btn, .work-filters {
+.mobile-menu-btn {
     display: none;
 }
 
 .work-grid {
     display: block;
+}
+
+.work-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 1.5em;
+    margin: 0 0 2em 0;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-btn {
+    font-family: inherit;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #666;
+    background: none;
+    border: none;
+    border-bottom: 1px solid transparent;
+    padding: 0.2em 0;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    color: #f00;
+}
+
+.filter-btn.active {
+    color: #000;
+    border-bottom-color: #000;
 }
 
 .featured-grid, .writing-grid, .code-grid {
@@ -250,6 +281,14 @@ img {
     margin-bottom: 0.3em;
     font-size: 0.9em;
     color: #666;
+}
+
+.tag-pill {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85em;
+    color: #999;
+    margin-left: 0.5em;
 }
 
 /* Sound Section */

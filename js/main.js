@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Work filter functionality
+    const setupWorkFilters = (container) => {
+        const filterButtons = container.querySelectorAll('.filter-btn');
+        const workItems = container.querySelectorAll('.project');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                workItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    };
+
     // Load section content
     const loadSectionContent = async (sectionId) => {
         try {
@@ -32,6 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (contentDiv) {
                     contentDiv.innerHTML = content;
                     console.log('Injected content into', contentDiv);
+                    if (sectionId === 'work') {
+                        setupWorkFilters(contentDiv);
+                    }
                 } else {
                     console.warn('No contentDiv found for', sectionId);
                 }
@@ -51,18 +77,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        mobileMenuBtn.classList.toggle('active');
-    });
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+        });
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.main-nav')) {
-            navLinks.classList.remove('active');
-            mobileMenuBtn.classList.remove('active');
-        }
-    });
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.main-nav')) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            }
+        });
+    }
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -76,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 // Close mobile menu after clicking a link
                 navLinks.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
+                if (mobileMenuBtn) mobileMenuBtn.classList.remove('active');
             }
         });
     });
@@ -102,26 +130,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Work filter functionality (if needed in the future)
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const workItems = document.querySelectorAll('.work-grid > *');
-
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
-            button.classList.add('active');
-
-            const filter = button.getAttribute('data-filter');
-
-            workItems.forEach(item => {
-                if (filter === 'all' || item.classList.contains(filter)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    });
 }); 
