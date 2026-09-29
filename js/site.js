@@ -42,7 +42,7 @@
         <section class="group">
             <h2 class="group-label">${group}</h2>
             <ul>${items.map((i) => `
-                <li><a href="#/${group}/${i.slug}" data-thumb="${esc(i.thumb || '')}"><span>${esc(i.title)}</span><span class="yr">${group === 'work' ? '' : esc(i.year || '')}</span></a></li>`).join('')}
+                <li><a href="#/${group}/${i.slug}" data-thumb="${esc(i.thumb || '')}"><span>${esc(i.title)}</span></a></li>`).join('')}
             </ul>
         </section>`).join('');
 
