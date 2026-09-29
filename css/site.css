@@ -1,0 +1,240 @@
+/*
+ * Fonts: the reference site (musquiqui.com) uses ABC Monument Grotesk Mono and
+ * ABC Favorit from Dinamo (paid licenses). If you buy them, drop the .woff2
+ * files in /fonts and uncomment the @font-face rules below. Until then the
+ * closest free matches (DM Mono, Inter) are used.
+ *
+ * @font-face { font-family: "ABC Monument Grotesk Mono"; src: url("../fonts/ABCMonumentGroteskMono-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+ * @font-face { font-family: "ABC Favorit"; src: url("../fonts/ABCFavorit-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+ * @font-face { font-family: "ABC Favorit"; src: url("../fonts/ABCFavorit-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+ */
+
+:root {
+    --fg: #000;
+    --muted: #8a8a8a;
+    --line: #e8e8e8;
+    --bg: #fff;
+    --mono: "ABC Monument Grotesk Mono", "Monument Grotesk Mono", "DM Mono", ui-monospace, monospace;
+    --sans: "ABC Favorit", "Favorit", "Inter", system-ui, sans-serif;
+    --gutter: 24px;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--muted); }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---------- Home: three columns ---------- */
+.home {
+    display: grid;
+    grid-template-columns: 180px minmax(300px, 400px) minmax(0, 1fr);
+    gap: 0 48px;
+    padding: var(--gutter);
+    min-height: 100vh;
+}
+.side {
+    position: sticky;
+    top: var(--gutter);
+    align-self: start;
+    height: calc(100vh - 2 * var(--gutter));
+    display: flex;
+    flex-direction: column;
+}
+.name {
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.15;
+    margin: 0 0 28px;
+}
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.7;
+}
+.nav a.active { text-decoration: underline; text-underline-offset: 3px; }
+.foot { margin: auto 0 0; color: var(--muted); font-size: 12px; }
+.foot-m { display: none; }
+
+.index { font-family: var(--mono); font-size: 13px; line-height: 1.7; }
+.group {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+.group-label {
+    margin: 0;
+    font: inherit;
+    text-align: right;
+}
+.group ul { list-style: none; margin: 0; padding: 0; }
+.group a { display: flex; justify-content: space-between; gap: 16px; }
+.group .yr { color: var(--muted); white-space: nowrap; }
+.group a:hover .yr { color: inherit; }
+
+.aside {
+    position: sticky;
+    top: var(--gutter);
+    align-self: start;
+    max-width: 620px;
+}
+.bio p { margin: 0 0 1em; }
+.bio .more { font-family: var(--mono); font-size: 13px; }
+.preview { display: none; }
+.preview img {
+    width: auto;
+    max-width: 100%;
+    max-height: calc(100vh - 2 * var(--gutter));
+    object-fit: contain;
+}
+.aside.previewing .bio { display: none; }
+.aside.previewing .preview { display: block; }
+
+/* ---------- Full-page view ---------- */
+.view { display: none; }
+body.is-page .home { display: none; }
+body.is-page .view { display: block; }
+
+.bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    padding: 14px var(--gutter);
+    background: rgba(255, 255, 255, 0.94);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 13px;
+}
+.bar-name { font-family: var(--sans); font-weight: 600; font-size: 14px; }
+.spacer { flex: 1; }
+.bar-right { display: flex; gap: 20px; }
+.bar-right .pos { color: var(--muted); }
+.bar-right a.active { text-decoration: underline; text-underline-offset: 3px; }
+
+.page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 48px var(--gutter) 120px;
+}
+.page-head { margin-bottom: 36px; }
+.page-title {
+    margin: 0 0 8px;
+    font-size: clamp(26px, 3.2vw, 40px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+.page-meta { margin: 0; font-family: var(--mono); font-size: 13px; color: var(--muted); }
+.page-meta:empty { display: none; }
+
+.page-body { font-size: 16px; line-height: 1.55; }
+.page-body :is(p, li, h2, h3, h4, blockquote, ul, ol) { max-width: 42em; }
+.page-body > div:not(:has(iframe, img, .video-container)) { max-width: 42em; margin: 1em 0; }
+.page-body p { margin: 0 0 1em; }
+.page-body a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); }
+.page-body a:hover { color: var(--muted); }
+.page-body h2 {
+    margin: 64px 0 16px;
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: lowercase;
+    color: var(--muted);
+}
+.page-body h3 { margin: 40px 0 8px; font-size: 18px; font-weight: 500; line-height: 1.3; }
+.page-body h2 + h3, .page-body > h3:first-child { margin-top: 0; }
+.page-body img { margin: 24px 0; cursor: zoom-in; }
+.page-body iframe { display: block; width: 100%; border: 0; margin: 24px 0; }
+.page-body strong { font-weight: 500; }
+
+.video-container, .video { position: relative; aspect-ratio: 16 / 9; margin: 24px 0; background: #f4f4f4; }
+.video-container > div { position: absolute !important; inset: 0; padding: 0 !important; }
+.video-container iframe, .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; }
+
+.image-grid, .stills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+    margin: 24px 0;
+}
+.image-grid img, .stills-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; margin: 0; }
+.image-caption { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+/* Lists used on teaching / talks / cv */
+.entry { margin: 0 0 28px; }
+.entry h3 { margin: 0 0 2px; }
+.meta, .date { font-family: var(--mono); font-size: 13px; color: var(--muted); margin: 0 0 8px; }
+.cv-header, .contact-info h3 { display: none; }
+.cv-section { margin-bottom: 48px; }
+.cv-item { margin-bottom: 16px; }
+.cv-item h3 { margin: 0; font-size: 16px; }
+.cv-item p { margin: 6px 0 0; }
+.cv-section h2 { margin-top: 0; }
+.loading { color: var(--muted); font-family: var(--mono); font-size: 13px; }
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: var(--gutter);
+    background: rgba(255, 255, 255, 0.97);
+    cursor: zoom-out;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; margin: 0; }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+    .home { grid-template-columns: 160px minmax(0, 1fr); }
+    .aside { grid-column: 2; position: static; margin-top: 16px; padding-top: 24px; border-top: 1px solid var(--line); }
+    .preview { display: none !important; }
+    .aside.previewing .bio { display: block; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+    :root { --gutter: 16px; }
+    .home { display: block; padding: 20px var(--gutter) 32px; }
+    .side { position: static; height: auto; display: block; margin-bottom: 36px; }
+    .name { margin-bottom: 14px; font-size: 18px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 0 18px; }
+    .side .foot { display: none; }
+    .foot-m { display: block; margin-top: 32px; }
+    .group { grid-template-columns: 1fr; gap: 4px; margin-bottom: 28px; }
+    .group-label { text-align: left; color: var(--muted); }
+    .group li a { padding: 3px 0; }
+    .aside { margin-top: 8px; }
+
+    .bar { gap: 16px; padding: 12px var(--gutter); }
+    .bar-right { gap: 14px; }
+    .bar-right .lbl, .bar-right .pos { display: none; }
+    .bar-right.info { display: none; }
+    .page { padding: 28px var(--gutter) 80px; }
+    .page-head { margin-bottom: 24px; }
+    .page-body { font-size: 15px; }
+    .page-body h2 { margin-top: 48px; }
+    .image-grid, .stills-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+}

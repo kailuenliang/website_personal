@@ -4,103 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kai-Luen Liang</title>
+    <meta name="description" content="Kai-Luen Liang — musician and interdisciplinary artist based in Los Angeles working with code, generative sound, and digital media.">
     <link rel="icon" type="image/png" href="media/images/tab_icon.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-    <header>
-        <nav class="main-nav">
-            <div class="nav-brand">
-                <h1>Kai-Luen Liang</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="sound.html">Sound</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="writing.html">Writing</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <div class="home" id="home">
+        <aside class="side">
+            <h1 class="name"><a href="#/">Kai-Luen<br>Liang</a></h1>
+            <ul class="nav">
+                <li><a href="#/about">about</a></li>
+                <li><a href="#/cv">cv</a></li>
+                <li><a href="#/teaching">teaching</a></li>
+                <li><a href="#/talks">talks</a></li>
+                <li><a href="#/contact">contact</a></li>
             </ul>
-        </nav>
-    </header>
+            <p class="foot">&copy; 2026 Kai-Luen Liang</p>
+        </aside>
 
-    <main>
-        <!-- Sections will be loaded dynamically -->
-        <section id="home" class="section">
-            <div class="container">
-                <!-- Home content will be loaded dynamically -->
+        <main class="index" id="index">
+            <noscript><p>This site needs JavaScript to browse projects. See the <a href="cv.html">CV</a>.</p></noscript>
+        </main>
+
+        <aside class="aside" id="aside">
+            <div class="bio">
+                <p>Kai-Luen Liang is a musician and interdisciplinary artist based in Los Angeles. Working with code, generative sound, and digital media, his work explores themes of memory, erasure, migration, and machine perception. He creates hybrid instruments and glitch-based software systems that embrace failure and miscommunication as a mode of resistance and poetic possibility.</p>
+                <p>He has exhibited internationally at ARS Electronica, SXSW, Boiler Room Beijing, Clockenflap and more, with music released on labels including SVBKVLT, Ran Music, and Robox Neotech. He is faculty at CalArts' Center for Integrated Media and a visiting artist at Occidental College, where he teaches courses on creative coding, AI, and sound installation.</p>
+                <p><a href="#/about" class="more">full bio &rarr;</a></p>
             </div>
-        </section>
+            <div class="preview" id="preview"></div>
+        </aside>
 
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About</h2>
-                <div class="about-content"></div>
-            </div>
-        </section>
+        <p class="foot foot-m">&copy; 2026 Kai-Luen Liang</p>
+    </div>
 
-        <section id="work" class="section">
-            <div class="container">
-                <h2>Selected Works</h2>
-                <div class="work-grid"></div>
-            </div>
-        </section>
+    <div class="view" id="view">
+        <header class="bar">
+            <a class="bar-name" href="#/">Kai-Luen Liang</a>
+            <a class="bar-index" href="#/">index</a>
+            <span class="spacer"></span>
+            <nav class="bar-right" id="bar-right"></nav>
+        </header>
+        <article class="page">
+            <header class="page-head">
+                <h1 class="page-title" id="page-title"></h1>
+                <p class="page-meta" id="page-meta"></p>
+            </header>
+            <div class="page-body" id="page-body"></div>
+        </article>
+    </div>
 
+    <div class="lightbox" id="lightbox" aria-hidden="true"><img alt=""></div>
 
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <a href="mailto:your.email@example.com" class="contact-link">
-                            <i class="fas fa-envelope"></i> your.email@example.com
-                        </a>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2021 Kai-Luen Liang. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Back to top button -->
-    <a href="#" class="back-to-top" id="backToTop">↑ Top</a>
-
-    <script src="js/main.js"></script>
-    <script>
-        // Back to top functionality
-        const backToTopButton = document.getElementById('backToTop');
-        
-        // Show button when user scrolls down 300px
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
-        
-        // Smooth scroll to top when button is clicked
-        backToTopButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
+    <script src="js/site.js"></script>
 </body>
-</html> 
+</html>
