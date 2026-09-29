@@ -95,12 +95,13 @@ img { max-width: 100%; height: auto; display: block; }
 .bio p { margin: 0 0 1em; }
 .bio .more { font-family: var(--mono); font-size: 13px; }
 .preview { display: none; }
+/* Every preview sits in the same 4:3 frame; cover crops, never stretches */
 .preview img, .preview video {
     display: block;
-    width: auto;
-    max-width: 100%;
-    max-height: calc(100vh - 2 * var(--gutter));
-    object-fit: contain;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: #f4f4f4;
 }
 .aside.previewing .bio { display: none; }
 .aside.previewing .preview { display: block; }
