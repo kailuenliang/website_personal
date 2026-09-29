@@ -1,31 +1,31 @@
 (() => {
     // ---- Content index. Add a project here and it appears on the homepage. ----
-    // src: page whose <main> (or `sel`) holds the content. thumb: hover preview on desktop.
+    // src: page whose <main> (or `sel`) holds the content. thumb: hover preview on desktop (media/thumbs/, .jpg or looping .mp4).
     const WORK = [
-        { slug: 'ghostwork-is-self-actualization', title: 'Ghostwork Is Self Actualization', year: '2025', src: 'projects/work_ghostwork_is_self_actualization.html', thumb: 'media/images/ghostwork/main.JPG' },
-        { slug: 'para-seedlings', title: 'Para-Seedlings', year: '2024', src: 'projects/work_seeds.html', thumb: 'media/images/seeds/seeds.gif' },
-        { slug: 'banana-clouds', title: 'Banana Clouds', year: '2024', src: 'projects/work_banana_clouds.html', thumb: 'media/images/banana_clouds/opera_banana.jpg' },
-        { slug: 'flow-and-oscillations', title: 'Flow and Oscillations', year: '2024', src: 'projects/work_flow_and_oscillations.html', thumb: 'media/images/flow_and_oscillations_thumbnail.png' },
-        { slug: 'bridge-made-of-ashes', title: 'Bridge Made of Ashes', year: '2021', src: 'projects/work_bridge_made_of_ashes.html', thumb: 'media/images/bridge_gif.gif' },
-        { slug: 'reverberations', title: 'Reverberations', year: '2020–21', src: 'projects/work_reverberations.html', thumb: 'media/images/reverberations.png' },
-        { slug: 'audio-visual-experiments', title: 'Audio Visual Experiments', year: '2020', src: 'projects/work_audio_visual_experiments.html', thumb: 'media/images/sound_image.gif' },
-        { slug: 'electronics-interfaces', title: 'Electronics / Interfaces', year: '2018', src: 'projects/work_electronics_interfaces.html', thumb: 'media/images/swarm.png' },
-        { slug: 'whose-face-if-not-yours', title: 'Whose Face If Not Yours', year: '2017–18', src: 'projects/work_whose_face_if_not_yours.html', thumb: 'media/images/Whose_face/04/21.jpg' },
-        { slug: 'void', title: '虚无 v7.0 (VOID)', year: '2016', src: 'projects/work_void.html', thumb: 'media/images/VOID.png' },
+        { slug: 'ghostwork-is-self-actualization', title: 'Ghostwork Is Self Actualization', year: '2025', src: 'projects/work_ghostwork_is_self_actualization.html', thumb: 'media/thumbs/ghostwork-is-self-actualization.jpg' },
+        { slug: 'para-seedlings', title: 'Para-Seedlings', year: '2024', src: 'projects/work_seeds.html', thumb: 'media/thumbs/para-seedlings.mp4' },
+        { slug: 'banana-clouds', title: 'Banana Clouds', year: '2024', src: 'projects/work_banana_clouds.html', thumb: 'media/thumbs/banana-clouds.jpg' },
+        { slug: 'flow-and-oscillations', title: 'Flow and Oscillations', year: '2024', src: 'projects/work_flow_and_oscillations.html', thumb: 'media/thumbs/flow-and-oscillations.jpg' },
+        { slug: 'bridge-made-of-ashes', title: 'Bridge Made of Ashes', year: '2021', src: 'projects/work_bridge_made_of_ashes.html', thumb: 'media/thumbs/bridge-made-of-ashes.mp4' },
+        { slug: 'reverberations', title: 'Reverberations', year: '2020–21', src: 'projects/work_reverberations.html', thumb: 'media/thumbs/reverberations.jpg' },
+        { slug: 'audio-visual-experiments', title: 'Audio Visual Experiments', year: '2020', src: 'projects/work_audio_visual_experiments.html', thumb: 'media/thumbs/audio-visual-experiments.mp4' },
+        { slug: 'electronics-interfaces', title: 'Electronics / Interfaces', year: '2018', src: 'projects/work_electronics_interfaces.html', thumb: 'media/thumbs/electronics-interfaces.jpg' },
+        { slug: 'whose-face-if-not-yours', title: 'Whose Face If Not Yours', year: '2017–18', src: 'projects/work_whose_face_if_not_yours.html', thumb: 'media/thumbs/whose-face-if-not-yours.jpg' },
+        { slug: 'void', title: '虚无 v7.0 (VOID)', year: '2016', src: 'projects/work_void.html', thumb: 'media/thumbs/void.jpg' },
     ];
     const PERFORMANCE = [
-        { slug: 'open-gate-concert-series', title: 'Open Gate Concert Series', year: '2026', meta: 'improvisation with Primoz Suzic — Scribble', src: 'content/performance/open-gate-concert-series.html' },
-        { slug: 'the-body-writes-in-machines', title: 'The Body Writes in Machines', year: '2026', meta: 'kinetic installation and performance with David B Jang — Oracle Egg Broiler Room Residency', src: 'content/performance/the-body-writes-in-machines.html' },
-        { slug: 'techno-babble-sound-bath', title: 'Techno Babble Sound Bath', year: '2025', meta: 'with gamin and Menghe Jing — Oracle Egg BROILER Residency, Los Angeles', src: 'content/sound/techno-babble-sound-bath.html', thumb: 'https://img.youtube.com/vi/5_aLGyVSh20/hqdefault.jpg' },
+        { slug: 'open-gate-concert-series', title: 'Open Gate Concert Series', year: '2026', meta: 'improvisation with Primoz Suzic — Scribble', src: 'content/performance/open-gate-concert-series.html', thumb: 'media/thumbs/open-gate-concert-series.jpg' },
+        { slug: 'the-body-writes-in-machines', title: 'The Body Writes in Machines', year: '2026', meta: 'kinetic installation and performance with David B Jang — Oracle Egg Broiler Room Residency', src: 'content/performance/the-body-writes-in-machines.html', thumb: 'media/thumbs/the-body-writes-in-machines.jpg' },
+        { slug: 'techno-babble-sound-bath', title: 'Techno Babble Sound Bath', year: '2025', meta: 'with gamin and Menghe Jing — Oracle Egg BROILER Residency, Los Angeles', src: 'content/sound/techno-babble-sound-bath.html', thumb: 'media/thumbs/techno-babble-sound-bath.jpg' },
     ];
     const SOUND = [
-        { slug: 'for-drifting-seas', title: 'For Drifting Seas', meta: 'album — Eating Music', src: 'content/sound/for-drifting-seas.html' },
-        { slug: 'the-hollow-ghost', title: 'The Hollow Ghost', meta: 'album', src: 'content/sound/the-hollow-ghost.html' },
-        { slug: 'techno-babble-sound-bath', title: 'Techno Babble Sound Bath', year: '2025', meta: 'performance — Oracle Egg, Los Angeles', src: 'content/sound/techno-babble-sound-bath.html', thumb: 'https://img.youtube.com/vi/5_aLGyVSh20/hqdefault.jpg' },
+        { slug: 'for-drifting-seas', title: 'For Drifting Seas', meta: 'album — Eating Music', src: 'content/sound/for-drifting-seas.html', thumb: 'media/thumbs/for-drifting-seas.jpg' },
+        { slug: 'the-hollow-ghost', title: 'The Hollow Ghost', meta: 'album', src: 'content/sound/the-hollow-ghost.html', thumb: 'media/thumbs/the-hollow-ghost.jpg' },
+        { slug: 'techno-babble-sound-bath', title: 'Techno Babble Sound Bath', year: '2025', meta: 'performance — Oracle Egg, Los Angeles', src: 'content/sound/techno-babble-sound-bath.html', thumb: 'media/thumbs/techno-babble-sound-bath.jpg' },
     ];
     const SOFTWARE = [
-        { slug: 'image-scanner', title: 'Image Scanner', meta: 'openFrameworks / C++', src: 'content/software/image-scanner.html' },
-        { slug: 'rgb-color-scanner', title: 'RGB Color Scanner', meta: 'Python / TouchDesigner', src: 'content/software/rgb-color-scanner.html' },
+        { slug: 'image-scanner', title: 'Image Scanner', meta: 'openFrameworks / C++', src: 'content/software/image-scanner.html', thumb: 'media/thumbs/image-scanner.jpg' },
+        { slug: 'rgb-color-scanner', title: 'RGB Color Scanner', meta: 'Python / TouchDesigner', src: 'content/software/rgb-color-scanner.html', thumb: 'media/thumbs/rgb-color-scanner.jpg' },
     ];
     const GROUPS = { work: WORK, performance: PERFORMANCE, sound: SOUND, software: SOFTWARE };
     const PAGES = {
@@ -59,11 +59,24 @@
         index.addEventListener('mouseover', (e) => {
             const a = e.target.closest('a[data-thumb]');
             if (!a) return;
-            if (!a.dataset.thumb) return clearPreview();
-            preview.innerHTML = `<img src="${a.dataset.thumb}" alt="">`;
+            const t = a.dataset.thumb;
+            if (!t) return clearPreview();
+            if (preview.dataset.src !== t) {
+                preview.dataset.src = t;
+                preview.innerHTML = t.endsWith('.mp4')
+                    ? `<video src="${t}" autoplay muted loop playsinline></video>`
+                    : `<img src="${t}" alt="">`;
+            }
             aside.classList.add('previewing');
         });
         index.addEventListener('mouseleave', clearPreview);
+
+        // Warm the cache once the page is idle so previews appear instantly
+        const warm = () => [...new Set(Object.values(GROUPS).flat().map((i) => i.thumb).filter(Boolean))].forEach((t) => {
+            if (t.endsWith('.mp4')) fetch(t).catch(() => {});
+            else new Image().src = t;
+        });
+        (window.requestIdleCallback || ((fn) => setTimeout(fn, 1500)))(warm);
     }
 
     // ---- Load + clean an existing page's content ----

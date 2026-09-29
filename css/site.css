@@ -95,7 +95,8 @@ img { max-width: 100%; height: auto; display: block; }
 .bio p { margin: 0 0 1em; }
 .bio .more { font-family: var(--mono); font-size: 13px; }
 .preview { display: none; }
-.preview img {
+.preview img, .preview video {
+    display: block;
     width: auto;
     max-width: 100%;
     max-height: calc(100vh - 2 * var(--gutter));
