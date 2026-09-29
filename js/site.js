@@ -15,7 +15,8 @@
     ];
     const PERFORMANCE = [
         { slug: 'open-gate-concert-series', title: 'Open Gate Concert Series', year: '2026', meta: 'improvisation with Primoz Suzic — Scribble', src: 'content/performance/open-gate-concert-series.html' },
-        { slug: 'the-body-writes-in-machines', title: 'The Body Writes in Machines', meta: 'kinetic installation and performance — with David B Jang', src: 'content/performance/the-body-writes-in-machines.html' },
+        { slug: 'the-body-writes-in-machines', title: 'The Body Writes in Machines', year: '2026', meta: 'kinetic installation and performance with David B Jang — Oracle Egg Broiler Room Residency', src: 'content/performance/the-body-writes-in-machines.html' },
+        { slug: 'techno-babble-sound-bath', title: 'Techno Babble Sound Bath', year: '2025', meta: 'with gamin and Menghe Jing — Oracle Egg BROILER Residency, Los Angeles', src: 'content/sound/techno-babble-sound-bath.html', thumb: 'https://img.youtube.com/vi/5_aLGyVSh20/hqdefault.jpg' },
     ];
     const SOUND = [
         { slug: 'for-drifting-seas', title: 'For Drifting Seas', meta: 'album — Eating Music', src: 'content/sound/for-drifting-seas.html' },
