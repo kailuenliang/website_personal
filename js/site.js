@@ -13,6 +13,10 @@
         { slug: 'whose-face-if-not-yours', title: 'Whose Face If Not Yours', year: '2017–18', src: 'projects/work_whose_face_if_not_yours.html', thumb: 'media/images/Whose_face/04/21.jpg' },
         { slug: 'void', title: '虚无 v7.0 (VOID)', year: '2016', src: 'projects/work_void.html', thumb: 'media/images/VOID.png' },
     ];
+    const PERFORMANCE = [
+        { slug: 'open-gate-concert-series', title: 'Open Gate Concert Series', year: '2026', meta: 'improvisation with Primoz Suzic — Scribble', src: 'content/performance/open-gate-concert-series.html' },
+        { slug: 'the-body-writes-in-machines', title: 'The Body Writes in Machines', meta: 'kinetic installation and performance — with David B Jang', src: 'content/performance/the-body-writes-in-machines.html' },
+    ];
     const SOUND = [
         { slug: 'for-drifting-seas', title: 'For Drifting Seas', meta: 'album — Eating Music', src: 'content/sound/for-drifting-seas.html' },
         { slug: 'the-hollow-ghost', title: 'The Hollow Ghost', meta: 'album', src: 'content/sound/the-hollow-ghost.html' },
@@ -22,7 +26,7 @@
         { slug: 'image-scanner', title: 'Image Scanner', meta: 'openFrameworks / C++', src: 'content/software/image-scanner.html' },
         { slug: 'rgb-color-scanner', title: 'RGB Color Scanner', meta: 'Python / TouchDesigner', src: 'content/software/rgb-color-scanner.html' },
     ];
-    const GROUPS = { work: WORK, sound: SOUND, software: SOFTWARE };
+    const GROUPS = { work: WORK, performance: PERFORMANCE, sound: SOUND, software: SOFTWARE };
     const PAGES = {
         about: { title: 'About', src: 'content/about.html' },
         cv: { title: 'CV', src: 'cv.html', sel: '.cv-container' },
