@@ -1,0 +1,4 @@
+
+# Stray install leftovers that break the GitHub Pages build
+{{pkgetc}}/
+{{etc}}/
